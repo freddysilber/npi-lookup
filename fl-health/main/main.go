@@ -64,6 +64,8 @@ func main() {
 
 	fileScanner := bufio.NewScanner(readFile)
 	fileScanner.Split(bufio.ScanLines)
+	// Remove first line
+	fileScanner.Scan()
 
 	var counties = []string{"palm beach", "martin", "saint lucie", "indian river", "okeechobee"}
 	var parts []string
